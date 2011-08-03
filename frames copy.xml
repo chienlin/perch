@@ -1,0 +1,32 @@
+
+
+<frames_list>
+	<frame>
+        <frameID>1</frameID>
+        <scale>1.5</scale>
+        <posx>100</posx>
+        <posy>100</posy>
+        <image>spot.png</image>
+        <fontID>12</fontID>
+	</frame>
+    
+    <frame>
+        <frameID>2</frameID>
+        <style>Oval</style>
+        <scale>0.5</scale>
+        <posx>300</posx>
+        <posy>300</posy>
+        <image>spot.png</image>
+        <fontID></fontID>
+	</frame>
+    
+    <frame>
+        <frameID>3</frameID>
+        <posx>400</posx>
+        <posy>400</posy>
+        <scale>1.0</scale>
+        <image>spot.png</image>
+        <fontID></fontID>
+	</frame>
+
+</frames_list>

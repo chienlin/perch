@@ -1,0 +1,24 @@
+dependencies \
+  /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o:  \
+ /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../../perchFrame.cpp \
+  /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../../perchFrame.h \
+  /Potion/poFramework/poFramework4/source/poShapeBasics2D.h \
+  /Potion/poFramework/poFramework4/source/poShape2D.h \
+  /Potion/poFramework/poFramework4/source/poObject.h \
+  /Potion/poFramework/poFramework4/source/poTween.h \
+  /Potion/poFramework/poFramework4/source/poEnums.h \
+  /Potion/poFramework/poFramework4/source/poPoint.h \
+  /Potion/poFramework/poFramework4/source/poDictionary.h \
+  /Potion/poFramework/poFramework4/source/poColor.h \
+  /Potion/poFramework/poFramework4/source/poEasingFunctions.h \
+  /Potion/poFramework/poFramework4/source/poMath.h \
+  /Potion/poFramework/poFramework4/source/poRect.h \
+  /Potion/poFramework/poFramework4/source/poEvent.h \
+  /Potion/poFramework/poFramework4/source/poMatrixSet.h \
+  /Potion/poFramework/poFramework4/source/poObjectModifier.h \
+  /Potion/poFramework/poFramework4/source/SimpleDrawing.h \
+  /Potion/poFramework/poFramework4/source/poTexture.h \
+  /Potion/poFramework/poFramework4/source/poTextureConfig.h \
+  /Potion/poFramework/poFramework4/source/poXML.h \
+  /Potion/libraries/pugixml/pugixml.hpp \
+  /Potion/libraries/pugixml/pugiconfig.hpp
