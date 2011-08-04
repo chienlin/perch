@@ -2,25 +2,25 @@
 <frames_list>
 	<frame>
 		<frameID>1</frameID>
-		<scale>1.5</scale>
-		<posx>249</posx>
-		<posy>513</posy>
+		<scale>1.40640879</scale>
+		<posx>980</posx>
+		<posy>215</posy>
 		<image>spot.png</image>
 		<fontID>12</fontID>
 	</frame>
 	<frame>
 		<frameID>2</frameID>
-		<scale>0.5</scale>
-		<posx>395</posx>
-		<posy>474</posy>
+		<scale>0.703204393</scale>
+		<posx>801</posx>
+		<posy>610</posy>
 		<image>spot.png</image>
 		<fontID />
 	</frame>
 	<frame>
 		<frameID>3</frameID>
-		<posx>418</posx>
-		<posy>311</posy>
-		<scale>1.0</scale>
+		<scale>2.1096127</scale>
+		<posx>384</posx>
+		<posy>376</posy>
 		<image>spot.png</image>
 		<fontID />
 	</frame>

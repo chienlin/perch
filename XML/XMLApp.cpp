@@ -17,7 +17,7 @@ void setupApplication() {
 	pathToFolder("XML", &path);
 	setCurrentPath(path);
 
-	applicationCreateWindow(0, WINDOW_TYPE_NORMAL, "XML", 100, 100, 700, 700);
+	applicationCreateWindow(0, WINDOW_TYPE_NORMAL, "XML", 100, 100, 1280, 800);
 }
 
 void cleanupApplication() {
