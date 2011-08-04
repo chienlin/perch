@@ -23,10 +23,8 @@ dependencies \
   /Potion/poFramework/poFramework4/source/poXML.h \
   /Potion/libraries/pugixml/pugixml.hpp \
   /Potion/libraries/pugixml/pugiconfig.hpp \
-  /Potion/poFramework/poFramework4/source/poApplication.h \
-  /Potion/poFramework/poFramework4/source/poWindow.h \
-  /Potion/poFramework/poFramework4/source/poCamera.h \
-  /Potion/poFramework/poFramework4/source/Helpers.h \
+  /Potion/poFramework/poFramework4/source/poTextbox.h \
+  /Potion/poFramework/poFramework4/source/TextLayout.h \
   /Potion/poFramework/poFramework4/source/poFont.h \
   /Potion/poFramework/poFramework4/source/poImage.h \
   /Potion/libraries/FreeType/ft2build.h \
@@ -41,9 +39,11 @@ dependencies \
   /Potion/libraries/FreeType/freetype/fttypes.h \
   /Potion/libraries/FreeType/freetype/ftsystem.h \
   /Potion/libraries/FreeType/freetype/ftimage.h \
-  /Potion/poFramework/poFramework4/source/poTextBox.h \
-  /Potion/poFramework/poFramework4/source/TextLayout.h \
   /Potion/poFramework/poFramework4/source/AttributedString.h \
   /Potion/libraries/Boost/boost_1_45_0/boost/iterator.hpp \
   /Potion/poFramework/poFramework4/source/poBitmapFontAtlas.h \
-  /Potion/poFramework/poFramework4/source/poTextureAtlas.h
+  /Potion/poFramework/poFramework4/source/poTextureAtlas.h \
+  /Potion/poFramework/poFramework4/source/poApplication.h \
+  /Potion/poFramework/poFramework4/source/poWindow.h \
+  /Potion/poFramework/poFramework4/source/poCamera.h \
+  /Potion/poFramework/poFramework4/source/Helpers.h
