@@ -13,13 +13,22 @@ public:
     void eventHandler( poEvent* E );
     
     poXMLDocument doc;
+    //control button
     poRectShape* controlbun;
+    poImage* controlImg;   
+    //save button
+    poRectShape* savebun;
+    poImage* saveImg;
     perchFrame* F[100];
 
 
-    
-    int clicknum;
-    int clicknum1;
+
+    bool controlbun_click;
+    bool savebun_click;
+    void update();
+
+
+
 
     bool control;
    

@@ -47,4 +47,6 @@ dependencies \
   /Potion/poFramework/poFramework4/source/poApplication.h \
   /Potion/poFramework/poFramework4/source/poWindow.h \
   /Potion/poFramework/poFramework4/source/poCamera.h \
-  /Potion/poFramework/poFramework4/source/Helpers.h
+  /Potion/poFramework/poFramework4/source/Helpers.h \
+  /Potion/poFramework/poFramework4/source/poResourceStore.h \
+  /Potion/poFramework/poFramework4/source/ResourceStore.h

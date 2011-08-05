@@ -35,10 +35,7 @@ perchFrame::perchFrame( poXMLNode node )
     R->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT,this, "click the frame");
     addChild( R );
     
-    //for press down to change scale of c
-    addEvent(PO_KEY_DOWN_EVENT, this, "click C to scale");
-    
-    
+        
     //text box for info
     tb = new poTextBox(getWindowWidth(), getWindowHeight()/2);
 	tb->textAlignment(PO_ALIGN_TOP_LEFT);
@@ -84,22 +81,7 @@ void perchFrame::eventHandler( poEvent* E )
      if (controlswitch) 
      {
     
-        if ( E->type == PO_KEY_DOWN_EVENT )
-        {
-                if (E->keyChar=='c') 
-                {
-                    R->scale.x *= 1.1;
-                    R->scale.y = R->scale.x;
-                }
-                if (E->keyChar=='x') 
-                {
-                    R->scale.x *= 0.9;
-                    R->scale.y = R->scale.x;
-                }
-            
-            frameNode.getChild("scale").setInnerFloat(R->scale.x);
-        }
-         
+                 
          
         if ( E->type == PO_MOUSE_DRAG_EVENT && E->message == "drag the frame")
         {
@@ -132,7 +114,8 @@ void perchFrame::eventHandler( poEvent* E )
                  R->scale.y = R->scale.x;
                  
              }
-           }
+             frameNode.getChild("scale").setInnerFloat(R->scale.x);
+         }
   
      
      }

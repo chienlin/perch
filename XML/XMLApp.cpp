@@ -7,6 +7,7 @@
 #include "Helpers.h"
 #include "poXML.h"
 #include "poTextBox.h"
+#include "poResourceStore.h"
 
 poObject *createObjectForID(uint uid) {
 	return new XMLApp();
@@ -25,7 +26,10 @@ void cleanupApplication() {
 
 XMLApp::XMLApp() {
     
-    clicknum = 0;
+ 
+    controlbun_click = false;
+    savebun_click = false;
+
     addModifier(new poCamera2D(poColor::black));
 
     // read XML 
@@ -43,52 +47,80 @@ XMLApp::XMLApp() {
 
    
     //Add a control panel
-    poRectShape* controlbun = new poRectShape("control.png");
-    controlbun->position = poPoint(600,600);
+    controlImg = getImage("control_off.png");
+    controlbun = new poRectShape(controlImg->texture());
+    controlbun->position = poPoint(640,600);
     controlbun->alignment(PO_ALIGN_CENTER_CENTER);
-    controlbun->fillColor = poColor::green;
     controlbun->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT, this, "click the control panel");
     addChild(controlbun);
     
     
-    // use key press to save 
-    addEvent( PO_KEY_DOWN_EVENT, this, "save the file");
+    // Add a save button to save 
+    saveImg =getImage("save_off.png");
+    savebun = new poRectShape(saveImg->texture());
+    savebun->position = poPoint(740,600);
+    savebun->alignment(PO_ALIGN_CENTER_CENTER);
+    savebun->addEvent(PO_MOUSE_OVER_EVENT, this,"mouse over");
+    savebun->addEvent( PO_MOUSE_DOWN_INSIDE_EVENT, this, "save the file");
+    addChild(savebun);
     
    
     
 	//applicationQuit();
 }
+void XMLApp::update()
+{
+
+   
+    savebun->placeTexture(saveImg->texture());
+    controlbun->placeTexture(controlImg->texture());
+
+
+}
+
+
 
 
 void XMLApp::eventHandler( poEvent* E )
 {
-    if( E->type == PO_MOUSE_DOWN_INSIDE_EVENT )
+    if( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "click the control panel")
     {
-        for (int i = 0; i < 3; i++) {
-             F[i]->controlswitch =!F[i]->controlswitch;
-        } 
        
-        if(clicknum%2 == 0)
+       
+        for (int i = 0; i < 3; i++) 
         {
-            static_cast<poShape2D*>(E->source)->fillColor = poColor::orange;
-
+            F[i]->controlswitch =!F[i]->controlswitch;
+        } 
+        //control button
+        
+        controlbun_click =! controlbun_click;
+        if(controlbun_click)
+        {
+            controlImg = getImage("control_on.png");
         }else{
-            
-            static_cast<poShape2D*>(E->source)->fillColor = poColor::green;
-
+            controlImg = getImage("control_off.png");
         }
-        clicknum++;
+        
+       
     }
-    
-    
-    
-    if ( E->type == PO_KEY_DOWN_EVENT )
+       
+    if( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "save the file")
     {
-        if ( E->keyChar == 's' && E->source == this)
-        {
+          
             printf("Save to frames.xml\n");
             doc.write("frames.xml");
-        }
+             //save button
+            //once you click then the save button turn to red
+            saveImg = getImage("save_on.png");
+      
+        
     }
-}
+    
+    if(E->type == PO_MOUSE_OVER_EVENT&& E->message =="mouse over")
+    {
+        //one you finish the click then the save button turn to pink
+        saveImg = getImage("save_off.png");
+    }
+    
+  }
 
