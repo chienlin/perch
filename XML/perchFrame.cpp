@@ -65,7 +65,7 @@ void perchFrame::draw(){
 }
 void perchFrame::update(){
     
-    //open frame bounds when contolswitch on
+    //open frame bounds when controlswitch on
     R->drawBounds = controlswitch;
     //open textbox when contolswitch on
     tb->position.set(R->bounds.width()*R->scale.x/2,0,1);
@@ -110,15 +110,29 @@ void perchFrame::eventHandler( poEvent* E )
          }
          if ( E->type == PO_MOUSE_DRAG_EVENT && E->message == "drag the green rect")
          {
-             SR1->position = R->objectToLocal(SR1,E->local_position);
-             if(SR1->position.x >= 0)
-             {
-                 R->scale.x *= (1+abs(SR1->position.x)/(256*R->scale.x));
-                 R->scale.y = R->scale.x;
              
+             poPoint tempPosition = R->objectToLocal(SR1,E->local_position); 
+             printf("tempPosition(%f,%f)\n",tempPosition.x,tempPosition.y);
+
+             //Because SR1 is the child of R, so we need to transform the event local position of SR1 into local position of R
+             SR1->position = R->objectToLocal(SR1,E->local_position);
+             //Fix the green rectangle to left corner
+             if (SR1->position.x != 0 && SR1->position.y != 0) {
+                 SR1->position.x = 0;
+                 SR1->position.y = 0;
+
              }
-     
-         }
+             //caculate distance
+             double distance = sqrt(pow((E->position.x - position.x),2) + pow((E->position.y - position.y),2));
+             double origindistance = R->bounds.width()/2*R->scale.x*sqrt(2);
+             
+             if(distance != origindistance)
+             {
+                 R->scale.x *= distance/origindistance;
+                 R->scale.y = R->scale.x;
+                 
+             }
+           }
   
      
      }
