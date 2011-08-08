@@ -95,8 +95,8 @@
 		E88E745913C66C0B0051F026 /* application */ = {
 			isa = PBXGroup;
 			children = (
-				1019CD9713EB5C1C00B0184A /* perchFrame.cpp */,
 				1019CD9813EB5C1C00B0184A /* perchFrame.h */,
+				1019CD9713EB5C1C00B0184A /* perchFrame.cpp */,
 				E88E745A13C66C0B0051F026 /* XMLApp.h */,
 				E88E745B13C66C0B0051F026 /* XMLApp.cpp */,
 			);

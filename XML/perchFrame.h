@@ -33,8 +33,11 @@ public:
    
     // the switch to turn on control function or turn off
     bool controlswitch;
-    //
-    poObject* controller;
+    // make all frames aligned to x
+    bool alignhorizontal;
+    // make all frames aligned to y
+    bool alignvertical;
+    int num;
 };
 
 

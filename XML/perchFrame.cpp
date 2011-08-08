@@ -11,11 +11,15 @@
 #include "poApplication.h"
 #include "poResourceStore.h"
 #include <boost/format.hpp>
+#define grid 15
 
 perchFrame::perchFrame( poXMLNode node )
 {
     
     controlswitch = false;
+    alignhorizontal = false;
+    alignvertical = false;
+    num = 0;
     
     
     frameNode = node;
@@ -85,10 +89,13 @@ void perchFrame::eventHandler( poEvent* E )
          
         if ( E->type == PO_MOUSE_DRAG_EVENT && E->message == "drag the frame")
         {
-            position = E->position;
+            //move by invisible grid line
+            position.x = int(E->position.x/grid)*grid;
+            position.y = int(E->position.y/grid)*grid;
+            //save the new position back to XML
             frameNode.getChild("posx").setInnerInt(position.x);
             frameNode.getChild("posy").setInnerInt(position.y);
-      
+                  
          }
          if ( E->type == PO_MOUSE_DRAG_EVENT && E->message == "drag the green rect")
          {

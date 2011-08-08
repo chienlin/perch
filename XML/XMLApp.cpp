@@ -34,7 +34,7 @@ XMLApp::XMLApp() {
 
     // read XML 
     doc = poXMLDocument("frames.xml");
-	poXMLNode rootNode = doc.rootNode();
+	rootNode = doc.rootNode();
     for( int i=0; i<rootNode.numChildren(); i++)
     {
         poXMLNode frameNode = rootNode.getChild(i); 
@@ -49,7 +49,7 @@ XMLApp::XMLApp() {
     //Add a control panel
     controlImg = getImage("control_off.png");
     controlbun = new poRectShape(controlImg->texture());
-    controlbun->position = poPoint(640,600);
+    controlbun->position = poPoint(getWindowWidth()-(controlbun->bounds.width()*3/2),controlbun->bounds.height()/2);
     controlbun->alignment(PO_ALIGN_CENTER_CENTER);
     controlbun->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT, this, "click the control panel");
     addChild(controlbun);
@@ -58,11 +58,21 @@ XMLApp::XMLApp() {
     // Add a save button to save 
     saveImg =getImage("save_off.png");
     savebun = new poRectShape(saveImg->texture());
-    savebun->position = poPoint(740,600);
+    savebun->position = poPoint(getWindowWidth()-savebun->bounds.width()/2,savebun->bounds.height()/2);
     savebun->alignment(PO_ALIGN_CENTER_CENTER);
     savebun->addEvent(PO_MOUSE_OVER_EVENT, this,"mouse over");
     savebun->addEvent( PO_MOUSE_DOWN_INSIDE_EVENT, this, "save the file");
     addChild(savebun);
+    
+    //Add an align button
+    alignbun = new poRectShape(160,61);
+    alignbun->fillColor = poColor::grey;
+    alignbun->position = poPoint(980,600);
+    alignbun->alignment(PO_ALIGN_CENTER_CENTER);
+    alignbun->addEvent(PO_MOUSE_OVER_EVENT, this,"mouse over");
+    alignbun->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT, this,"align horizontally");
+    addChild(alignbun);
+    
     
    
     
@@ -74,6 +84,7 @@ void XMLApp::update()
    
     savebun->placeTexture(saveImg->texture());
     controlbun->placeTexture(controlImg->texture());
+//    alignbun->visible = false;
 
 
 }
@@ -90,6 +101,7 @@ void XMLApp::eventHandler( poEvent* E )
         for (int i = 0; i < 3; i++) 
         {
             F[i]->controlswitch =!F[i]->controlswitch;
+      
         } 
         //control button
         
@@ -114,6 +126,23 @@ void XMLApp::eventHandler( poEvent* E )
             saveImg = getImage("save_on.png");
       
         
+    }
+    if(E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "align horizontally")
+    {
+        printf("align horizontally\n");
+        float averagey = 0;
+        for (int i = 0; i < 3; i++) 
+        {
+        
+            averagey = averagey + F[i]->position.y ;
+            
+        }
+        for (int i = 0; i < 3; i++) 
+        {
+            F[i]->position.y = averagey/3;
+        }
+        printf("align horizontally:%f\n",averagey);
+    
     }
     
     if(E->type == PO_MOUSE_OVER_EVENT&& E->message =="mouse over")
