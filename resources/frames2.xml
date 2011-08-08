@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<frames_list>
+	<frame>
+		<frameID>1</frameID>
+		<scale>1.28524792</scale>
+		<posx>930</posx>
+		<posy>630</posy>
+		<image>3Dbox.png</image>
+		<fontID>12</fontID>
+	</frame>
+	<frame>
+		<frameID>2</frameID>
+		<scale>0.940749586</scale>
+		<posx>337</posx>
+		<posy>177</posy>
+		<image>3Dbox.png</image>
+		<fontID />
+	</frame>
+	<frame>
+		<frameID>3</frameID>
+		<scale>1.72894037</scale>
+		<posx>300</posx>
+		<posy>495</posy>
+		<image>3Dbox.png</image>
+		<fontID />
+	</frame>
+	<frame>
+		<frameID />
+		<scale />
+		<posx />
+		<posy />
+	</frame>
+	<frame>
+		<frameID />
+		<scale />
+		<posx />
+		<posy />
+	</frame>
+</frames_list>

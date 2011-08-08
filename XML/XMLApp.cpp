@@ -14,10 +14,8 @@ poObject *createObjectForID(uint uid) {
 }
 
 void setupApplication() {
-	fs::path path;
-	pathToFolder("XML", &path);
-	setCurrentPath(path);
 
+    lookUpAndSetPath("resources");
 	applicationCreateWindow(0, WINDOW_TYPE_NORMAL, "XML", 100, 100, 1280, 800);
 }
 
@@ -30,7 +28,7 @@ XMLApp::XMLApp() {
     controlbun_click = false;
     savebun_click = false;
 
-    addModifier(new poCamera2D(poColor::black));
+    addModifier(new poCamera2D(poColor::white));
 
     // read XML 
     doc = poXMLDocument("frames.xml");
@@ -64,16 +62,23 @@ XMLApp::XMLApp() {
     savebun->addEvent( PO_MOUSE_DOWN_INSIDE_EVENT, this, "save the file");
     addChild(savebun);
     
-    //Add an align button
-    alignbun = new poRectShape(160,61);
-    alignbun->fillColor = poColor::grey;
-    alignbun->position = poPoint(980,600);
-    alignbun->alignment(PO_ALIGN_CENTER_CENTER);
-    alignbun->addEvent(PO_MOUSE_OVER_EVENT, this,"mouse over");
-    alignbun->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT, this,"align horizontally");
-    addChild(alignbun);
+    //Add an add frame button
+    addImg = getImage("add.png");
+    addbun = new poRectShape(addImg->texture());
+    addbun->position = poPoint(getWindowWidth()-savebun->bounds.width()*2-addbun->bounds.width()/2,addbun->bounds.height()/2);
+    addbun->alignment(PO_ALIGN_CENTER_CENTER);
+    addbun->addEvent(PO_MOUSE_OVER_EVENT, this,"mouse over");
+    addbun->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT, this,"add a new frame");
+    addChild(addbun);
     
-    
+    //Add an delete frame button
+    deleteImg = getImage("delete.png");
+    deletebun = new poRectShape(deleteImg->texture());
+    deletebun->position = poPoint(getWindowWidth()-savebun->bounds.width()*2-deletebun->bounds.width()*3/2,deletebun->bounds.height()/2);
+    deletebun->alignment(PO_ALIGN_CENTER_CENTER);
+    deletebun->addEvent(PO_MOUSE_OVER_EVENT, this,"mouse over");
+    deletebun->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT, this,"delete a frame");
+    addChild(deletebun);
    
     
 	//applicationQuit();
@@ -98,7 +103,7 @@ void XMLApp::eventHandler( poEvent* E )
     {
        
        
-        for (int i = 0; i < 3; i++) 
+        for (int i = 0; i < rootNode.numChildren(); i++) 
         {
             F[i]->controlswitch =!F[i]->controlswitch;
       
@@ -127,22 +132,17 @@ void XMLApp::eventHandler( poEvent* E )
       
         
     }
-    if(E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "align horizontally")
+    if(E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "add a new frame")
     {
-        printf("align horizontally\n");
-        float averagey = 0;
-        for (int i = 0; i < 3; i++) 
-        {
-        
-            averagey = averagey + F[i]->position.y ;
-            
-        }
-        for (int i = 0; i < 3; i++) 
-        {
-            F[i]->position.y = averagey/3;
-        }
-        printf("align horizontally:%f\n",averagey);
-    
+        printf("add a new frame\n");
+//        poXMLNode newframe = rootNode.addChild("frame");
+//        newframe.addChild("frameID").setInnerInt(4);
+//        newframe.addChild("scale").setInnerInt(4);
+//        newframe.addChild("posx").setInnerInt(4);
+//        newframe.addChild("posy").setInnerInt(4);
+//        
+//        doc.write("frames2.xml");
+//        printf("%d",rootNode.numChildren());
     }
     
     if(E->type == PO_MOUSE_OVER_EVENT&& E->message =="mouse over")

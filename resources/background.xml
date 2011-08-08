@@ -1,0 +1,12 @@
+
+
+<background_list>
+	<background>
+        <picture>BG1.jpg</picture>
+        <texture></texture>
+        <text></text>
+        <logo></logo>
+        <position></position> <!-- this can be centered, or stretch, or tile -->
+        <animation_mode></animation_mode>
+	</background>
+</background_list>

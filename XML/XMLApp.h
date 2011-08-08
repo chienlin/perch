@@ -1,4 +1,4 @@
-/*	Created by Joshua Fisher on 7/7/11.
+/*	Created by Chien on 7/7/11.
  *	Copyright 2011 Potion Design. All rights reserved.
  */
 
@@ -23,9 +23,13 @@ public:
     poImage* saveImg;
     
   
-    //align button
-    poRectShape* alignbun;
-
+    //add frame button
+    poRectShape* addbun;
+    poImage* addImg;
+    
+    //delete frame button
+    poRectShape* deletebun;
+    poImage* deleteImg;
 
     perchFrame* F[100];
     bool controlbun_click;
