@@ -43,6 +43,7 @@ perchFrame::perchFrame( poXMLNode node )
     //text box for info
     tb = new poTextBox(getWindowWidth(), getWindowHeight()/2);
 	tb->textAlignment(PO_ALIGN_TOP_LEFT);
+    tb->textColor = poColor::green;
     tb->font(getFont("Courier", 12));
 	addChild(tb);
     

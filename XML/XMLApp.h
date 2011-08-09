@@ -4,7 +4,10 @@
 
 #include "poObject.h"
 #include "perchFrame.h"
+#include <list>
+using namespace std;
 
+typedef list<perchFrame*> LIST;
 
 class XMLApp : public poObject {
     
@@ -31,12 +34,16 @@ public:
     poRectShape* deletebun;
     poImage* deleteImg;
 
-    perchFrame* F[100];
+    perchFrame* F;
+    
+//    perchFrame* F[100];
     bool controlbun_click;
     bool savebun_click;
   
 
-
+    //create a list to store perchframe objects
+    LIST::iterator iter;
+    LIST framelist;
 
 
     bool control;

@@ -4,10 +4,12 @@
 
 #include <fstream>
 
+
 #include "Helpers.h"
 #include "poXML.h"
 #include "poTextBox.h"
 #include "poResourceStore.h"
+
 
 poObject *createObjectForID(uint uid) {
 	return new XMLApp();
@@ -24,11 +26,14 @@ void cleanupApplication() {
 
 XMLApp::XMLApp() {
     
- 
+    addModifier(new poCamera2D(poColor::white));
+    
+    //click declare 
     controlbun_click = false;
     savebun_click = false;
+    
 
-    addModifier(new poCamera2D(poColor::white));
+ 
 
     // read XML 
     doc = poXMLDocument("frames.xml");
@@ -36,8 +41,11 @@ XMLApp::XMLApp() {
     for( int i=0; i<rootNode.numChildren(); i++)
     {
         poXMLNode frameNode = rootNode.getChild(i); 
-        F[i] = new perchFrame( frameNode );
-        addChild( F[i] );
+        //F[i] = new perchFrame( frameNode);
+        //addChild(F[i]);
+        F = new perchFrame( frameNode );
+        framelist.insert(framelist.end(), F);
+        addChild( F );
     }   
 
    
@@ -103,9 +111,11 @@ void XMLApp::eventHandler( poEvent* E )
     {
        
        
-        for (int i = 0; i < rootNode.numChildren(); i++) 
+        for (iter=framelist.begin();iter!=framelist.end();++iter) 
         {
-            F[i]->controlswitch =!F[i]->controlswitch;
+            (*iter)->controlswitch =!(*iter)->controlswitch ; 
+            //=! iter->controlswitch;
+            //*iter->controlswitch =!*iter->controlswitch;
       
         } 
         //control button

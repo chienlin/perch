@@ -21,6 +21,7 @@ public:
     void eventHandler( poEvent* E );
     void draw();
     void update();
+
     
     
     poXMLNode   frameNode;
