@@ -50,7 +50,7 @@ XMLApp::XMLApp() {
         framelist.insert(framelist.end(), F);
         addChild( F );
     }   
-   
+    
 
    
     //Add a control panel

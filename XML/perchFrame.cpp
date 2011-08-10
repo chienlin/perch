@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "perchFrame.h"
+#include "perchProduct.h"
 #include "poApplication.h"
 #include "poResourceStore.h"
 #include <boost/format.hpp>
@@ -20,11 +21,6 @@ perchFrame::perchFrame( poXMLNode node )
 {
     
     controlswitch = false;
-    alignhorizontal = false;
-    alignvertical = false;
-    num = 0;
-    
-    
     frameNode = node;
     
     // object position
@@ -60,6 +56,14 @@ perchFrame::perchFrame( poXMLNode node )
     SR1->addEvent(PO_MOUSE_DRAG_EVENT, this, "drag the green rect");
     SR1->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT,this, "click the green rect");
     R->addChild(SR1);
+    
+    //read product info from product.xml
+//    poXMLDocument doc_product = poXMLDocument("product.xml");
+//    productInfo = new perchProduct(doc_product.rootNode(),frameNode.getChild("frameID").innerInt());//according to current frameID find the product info in product.xml
+//    productInfo->position = poPoint(R->bounds.height()*R->scale.x/2,R->bounds.width()*R->scale.x/2);
+//    productInfo->alignment(PO_ALIGN_CENTER_CENTER);
+//    R->addChild(productInfo);
+//    productInfo->visible = false;        
        
     
 }
@@ -87,7 +91,6 @@ void perchFrame::update(){
     {
         frameNode.setName("Selected");
         R->generateStroke(6);
-     
     }
     else
     {    
@@ -95,8 +98,16 @@ void perchFrame::update(){
         R->generateStroke(0);
     }
     // assign active frame when it is not in select mode
-    if (!controlswitch) activeFrame = NULL;
-
+    if (!controlswitch) 
+    {
+        activeFrame = NULL;
+    }else
+    {
+//        productInfo->visible = false;
+    }
+    
+    
+    
     
 }
 
@@ -123,6 +134,7 @@ void perchFrame::eventHandler( poEvent* E )
          if ( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "click the frame")
          {
              activeFrame = this;
+           
          }
          
          //green scale control
@@ -154,6 +166,18 @@ void perchFrame::eventHandler( poEvent* E )
              frameNode.getChild("scale").setInnerFloat(R->scale.x);
          }
   
+     
+     }else// control switch = false
+     {
+     
+     
+         if ( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "click the frame")
+         {
+           
+         
+//             productInfo->visible = true;
+         }
+     
      
      }
     

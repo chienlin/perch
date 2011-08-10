@@ -34,13 +34,12 @@ public:
    
     // the switch to turn on control function or turn off
     bool controlswitch;
-    // make all frames aligned to x
-    bool alignhorizontal;
-    // make all frames aligned to y
-    bool alignvertical;
-    int num;
-    
+
+    //for selecting perchFrame
     static perchFrame* activeFrame;
+    
+    // for display product info from product.xml
+    poObject* productInfo;
 };
 
 

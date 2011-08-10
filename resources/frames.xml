@@ -9,28 +9,21 @@
 	</frame>
 	<frame>
 		<frameID>5</frameID>
-		<scale>0.851903677</scale>
-		<posx>180</posx>
-		<posy>420</posy>
+		<scale>0.325294197</scale>
+		<posx>360</posx>
+		<posy>480</posy>
 		<image>3Dbox.png</image>
 	</frame>
-	<frame>
-		<frameID>6</frameID>
-		<scale>1</scale>
-		<posx>510</posx>
-		<posy>270</posy>
-		<image>3Dbox.png</image>
-	</frame>
-	<frame>
+	<Selected>
 		<frameID>9</frameID>
 		<scale>1</scale>
-		<posx>315</posx>
-		<posy>270</posy>
+		<posx>345</posx>
+		<posy>330</posy>
 		<image>3Dbox.png</image>
-	</frame>
+	</Selected>
 	<frame>
 		<frameID>10</frameID>
-		<scale>0.756637275</scale>
+		<scale>1.27472496</scale>
 		<posx>750</posx>
 		<posy>195</posy>
 		<image>3Dbox.png</image>

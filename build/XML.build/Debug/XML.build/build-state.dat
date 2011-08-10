@@ -12,6 +12,7 @@ cCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/poOpenGLView.o /Po
 cCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
 cCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp normal i386 c++ com.apple.compilers.llvmgcc42
 cCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchbackground.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchbackground.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchProduct.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.cpp normal i386 c++ com.apple.compilers.llvmgcc42
 cLd /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/MacOS/XML normal i386
 cCpResource XML/../platform/Debug.xcconfig build/Debug/XML.app/Contents/Resources/Debug.xcconfig
 cCpResource XML/../platform/Release.xcconfig build/Debug/XML.app/Contents/Resources/Release.xcconfig
@@ -3546,9 +3547,9 @@ t1311709085
 s4440
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cpp
-c000000004E42C7F90000000000001744
-t1312999417
-s5956
+c000000004E42E6260000000000001745
+t1313007142
+s5957
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.h
 c000000004E41A66100000000000003A2
@@ -3556,14 +3557,24 @@ t1312925281
 s930
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp
-c000000004E42B318000000000000120E
-t1312994072
-s4622
+c000000004E43007C000000000000152E
+t1313013884
+s5422
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.h
-c000000004E41B38D000000000000035C
-t1312928653
-s860
+c000000004E42F6E20000000000000341
+t1313011426
+s833
+
+N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.cpp
+c000000004E42F5140000000000000324
+t1313010964
+s804
+
+N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.h
+c000000004E42ED110000000000000258
+t1313008913
+s600
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchbackground.cpp
 c000000004E4190D20000000000000369
@@ -3575,8 +3586,18 @@ c000000004E418903000000000000018A
 t1312917763
 s394
 
+N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchproduct.cpp
+c000000004E42D87600000000000000FC
+t1313003638
+s252
+
+N/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchproduct.h
+c000000004E42D8890000000000000165
+t1313003657
+s357
+
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app
-t1312999420
+t1313013887
 s102
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/Info.plist
@@ -3584,8 +3605,8 @@ t1312928132
 s1258
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/MacOS/XML
-t1312999420
-s6602836
+t1313013887
+s6614600
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/PkgInfo
 t1312928132
@@ -3616,25 +3637,33 @@ t1312928150
 s383124
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/XML.LinkFileList
-c000000004E41B18400000000000002CE
-t1312928132
-s718
+c000000004E42D89C0000000000000348
+t1313003676
+s840
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.o
-t1312999419
-s698284
+t1313011429
+s698252
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/main.o
 t1312928145
 s2004
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o
-t1312994121
-s613432
+t1313013886
+s613360
+
+N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchProduct.o
+t1313010968
+s461828
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchbackground.o
 t1312928151
 s391472
+
+N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchproduct.o
+t1313001206
+s349912
 
 N/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/poOpenGLView.o
 t1312928151
@@ -3770,6 +3799,11 @@ c000000004E2DD62300000000000008A2
 t1311626787
 s2210
 
+N/Potion/poFramework/poFramework4/source/poTextBox.h
+c000000004E414B290000000000000B1C
+t1312901929
+s2844
+
 N/Potion/poFramework/poFramework4/source/poTextbox.h
 c000000004E414B290000000000000B1C
 t1312901929
@@ -3837,12 +3871,18 @@ r0
 CBuild AST from /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp
 r0
 
+CBuild AST from /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.cpp
+r0
+
 CBuild AST from /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchbackground.cpp
+r0
+
+CBuild AST from /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchproduct.cpp
 r0
 
 CCheck dependencies
 r0
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies22544994fff2b341^fdbc4994fff2b341^---0#1#0#--18"Check dependencies
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7ac5cbd23cf3b341^2e1bcdd23cf3b341^---0#1#0#--18"Check dependencies
 
 CCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/AppDelegate.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/AppDelegate.mm normal i386 objective-c++ com.apple.compilers.llvmgcc42
 s334620948.202998
@@ -3858,8 +3898,8 @@ xcom.apple.compilers.llvmgcc42
 lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/AppDelegate.mm5a123414e9f1b341^c87d4b16e9f1b341^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/AppDelegate.mm0000000000000000^2186"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/AppDelegate.o XML/../platform/AppDelegate.mm normal i386 objective-c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-egcwcxhtscgrycdmxmmojjsozopc/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/AppDelegate.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/AppDelegate.mm -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/AppDelegate.o
 
 CCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s334692217.125567
-e334692219.965808
+s334704226.704450
+e334704229.625340
 r1
 xCompileC
 xbuild/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.o
@@ -3868,7 +3908,7 @@ xnormal
 xi386
 xc++
 xcom.apple.compilers.llvmgcc42
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cpp1b472079fff2b341^793ef77bfff2b341^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cpp0000000000000000^2119"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.o XML/XMLApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-dzavhytuoegyppbhubeirgwbgkoz/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cpp -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.o
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cppbd8eb4622ef3b341^b115a0652ef3b341^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cpp0000000000000000^2119"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.o XML/XMLApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-dzavhytuoegyppbhubeirgwbgkoz/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/XMLApp.cpp -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/XMLApp.o
 
 CCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/main.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
 s334620945.420150
@@ -3884,8 +3924,8 @@ xcom.apple.compilers.llvmgcc42
 lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/main.m61a86b11e9f1b341^658b9811e9f1b341^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/main.m0000000000000000^2117"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/main.o XML/../platform/main.m normal i386 objective-c com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-byqxuofllofjboethouxsjntqado/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/main.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/main.m -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/main.o
 
 CCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s334686919.659505
-e334686921.821379
+s334706684.882392
+e334706686.879623
 r1
 xCompileC
 xbuild/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o
@@ -3894,7 +3934,20 @@ xnormal
 xi386
 xc++
 xcom.apple.compilers.llvmgcc42
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp87fba8c7eaf2b341^0057d2c9eaf2b341^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp0000000000000000^2139"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o XML/perchFrame.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-dzavhytuoegyppbhubeirgwbgkoz/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp7502e2fc37f3b341^1d3ae1fe37f3b341^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp0000000000000000^2139"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o XML/perchFrame.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-dzavhytuoegyppbhubeirgwbgkoz/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchFrame.cpp -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchFrame.o
+
+CCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchProduct.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s334703764.937567
+e334703768.099537
+r1
+xCompileC
+xbuild/XML.build/Debug/XML.build/Objects-normal/i386/perchProduct.o
+x/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.cppbc3df0942cf3b341^a08819982cf3b341^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.cpp0000000000000000^2149"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchProduct.o XML/perchProduct.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-dzavhytuoegyppbhubeirgwbgkoz/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchProduct.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.cpp -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchProduct.o
 
 CCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchbackground.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchbackground.cpp normal i386 c++ com.apple.compilers.llvmgcc42
 s334620950.296106
@@ -3908,6 +3961,19 @@ xi386
 xc++
 xcom.apple.compilers.llvmgcc42
 lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchbackground.cppc0e74b16e9f1b341^afce0518e9f1b341^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchbackground.cpp0000000000000000^2164"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchbackground.o XML/perchbackground.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-dzavhytuoegyppbhubeirgwbgkoz/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchbackground.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchbackground.cpp -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchbackground.o
+
+CCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchproduct.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchproduct.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s334694004.678046
+e334694006.141451
+r1
+xCompileC
+xbuild/XML.build/Debug/XML.build/Objects-normal/i386/perchproduct.o
+x/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchproduct.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchproduct.cpp60aead7406f3b341^2558247606f3b341^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchproduct.cpp0000000000000000^2149"CompileC build/XML.build/Debug/XML.build/Objects-normal/i386/perchproduct.o XML/perchproduct.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -include /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-dzavhytuoegyppbhubeirgwbgkoz/main.pch -MMD -MT dependencies -MF /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchproduct.d -c /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchproduct.cpp -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/perchproduct.o
 
 CCompileC build/XML.build/Debug/XML.build/Objects-normal/i386/poOpenGLView.o /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/../platform/poOpenGLView.mm normal i386 objective-c++ com.apple.compilers.llvmgcc42
 s334620949.257630
@@ -3967,14 +4033,14 @@ xbuild/Debug/XML.app/Contents/Resources/main.pch
 lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Copy build/Debug/XML.app/Contents/Resources/main.pchcc980e19e9f1b341^eb3b0f19e9f1b341^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/Resources/main.pch000000f3b92a0042^405"CpResource platform/main.pch build/Debug/XML.app/Contents/Resources/main.pch    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Potion/poFramework/poFramework4/samples/XML_perchtest/platform/main.pch /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/Resources
 
 CLd /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/MacOS/XML normal i386
-s334692219.967755
-e334692220.339917
+s334706686.881787
+e334706687.265419
 r1
 xLd
 x/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/MacOS/XML
 xnormal
 xi386
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Link /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/MacOS/XMLe5d3f77bfff2b341^9605577cfff2b341^---0#0#0#--809"Ld build/Debug/XML.app/Contents/MacOS/XML normal i386    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -L/Potion/poFramework/poFramework4/xcode/build/Debug -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -filelist /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/XML.LinkFileList -mmacosx-version-min=10.6 -lpotionLib -framework Cocoa -framework ApplicationServices -framework OpenGL -framework CoreVideo -framework QTKit -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/MacOS/XML
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Link /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/MacOS/XML5fd1e1fe37f3b341^6bf343ff37f3b341^---0#0#0#--809"Ld build/Debug/XML.app/Contents/MacOS/XML normal i386    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -L/Potion/poFramework/poFramework4/xcode/build/Debug -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -filelist /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/Objects-normal/i386/XML.LinkFileList -mmacosx-version-min=10.6 -lpotionLib -framework Cocoa -framework ApplicationServices -framework OpenGL -framework CoreVideo -framework QTKit -o /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/MacOS/XML
 
 CProcessInfoPlistFile /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app/Contents/Info.plist platform/main.plist
 s334620932.203867
@@ -4034,10 +4100,10 @@ xcom.apple.compilers.llvmgcc42
 lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Precompile platform/main.pchb0545704e9f1b341^7e1acb12e9f1b341^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Potion/poFramework/poFramework4/samples/XML_perchtest/platform/main.pch0000000000000000^2146"ProcessPCH++ /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-egcwcxhtscgrycdmxmmojjsozopc/main.pch.gch platform/main.pch normal i386 objective-c++ com.apple.compilers.llvmgcc42    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x objective-c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -DDEBUG -DTIXML_USE_STL -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fvisibility=hidden -fvisibility-inlines-hidden -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-generated-files.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-own-target-headers.hmap -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-all-target-headers.hmap -iquote /Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/XML-project-headers.hmap -iquote/Potion/poFramework/poFramework4/source -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/include -I/Potion/libraries/Boost/boost_1_45_0 -I/Potion/libraries/FreeImage -I/Potion/libraries/TinyXPath -I/Potion/libraries/FreeType -I/Potion/libraries/utf8 -I/Potion/libraries/libMikko -I/Potion/libraries/bz2 -I/Potion/libraries/pugixml -I/Potion/libraries -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources/i386 -I/Potion/poFramework/poFramework4/samples/XML_perchtest/build/XML.build/Debug/XML.build/DerivedSources -F/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug -c /Potion/poFramework/poFramework4/samples/XML_perchtest/platform/main.pch -o /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-egcwcxhtscgrycdmxmmojjsozopc/main.pch.gch -MMD -MT dependencies -MF /var/folders/Ul/UlcQbZX-FtaThMlHlbDy2E+++TM/-Caches-/com.apple.Xcode.502/SharedPrecompiledHeaders/main-egcwcxhtscgrycdmxmmojjsozopc/main.pch.d
 
 CTouch /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app
-s334692220.348724
-e334692220.356922
+s334706687.274441
+e334706687.281901
 r1
 xTouch
 x/Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Touch /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app5358597cfff2b341^6b605b7cfff2b341^---0#0#0#--185"Touch build/Debug/XML.app    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    /usr/bin/touch -c /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Touch /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app155246ff37f3b341^952b48ff37f3b341^---0#0#0#--185"Touch build/Debug/XML.app    cd /Potion/poFramework/poFramework4/samples/XML_perchtest    /usr/bin/touch -c /Potion/poFramework/poFramework4/samples/XML_perchtest/build/Debug/XML.app
 
