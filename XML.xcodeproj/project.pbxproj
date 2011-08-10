@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1019CD9913EB5C1C00B0184A /* perchFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1019CD9713EB5C1C00B0184A /* perchFrame.cpp */; };
+		1031DEAE13F1BA9900F60C7B /* perchbackground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1031DEAD13F1BA9900F60C7B /* perchbackground.cpp */; };
 		E88E744713C66C0B0051F026 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E88E744613C66C0B0051F026 /* Debug.xcconfig */; };
 		E88E744913C66C0B0051F026 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E88E744813C66C0B0051F026 /* Release.xcconfig */; };
 		E88E744C13C66C0B0051F026 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E88E744B13C66C0B0051F026 /* AppDelegate.mm */; };
@@ -22,6 +23,8 @@
 /* Begin PBXFileReference section */
 		1019CD9713EB5C1C00B0184A /* perchFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = perchFrame.cpp; sourceTree = "<group>"; };
 		1019CD9813EB5C1C00B0184A /* perchFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = perchFrame.h; sourceTree = "<group>"; };
+		1031DEAB13F1BA7300F60C7B /* perchbackground.h */ = {isa = PBXFileReference; fileEncoding = 4; path = perchbackground.h; sourceTree = "<group>"; };
+		1031DEAD13F1BA9900F60C7B /* perchbackground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = perchbackground.cpp; sourceTree = "<group>"; };
 		E88E744113C66C0B0051F026 /* XML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88E744613C66C0B0051F026 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../platform/Debug.xcconfig; sourceTree = "<group>"; };
 		E88E744813C66C0B0051F026 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../platform/Release.xcconfig; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 		E88E745913C66C0B0051F026 /* application */ = {
 			isa = PBXGroup;
 			children = (
+				1031DEAB13F1BA7300F60C7B /* perchbackground.h */,
+				1031DEAD13F1BA9900F60C7B /* perchbackground.cpp */,
 				1019CD9813EB5C1C00B0184A /* perchFrame.h */,
 				1019CD9713EB5C1C00B0184A /* perchFrame.cpp */,
 				E88E745A13C66C0B0051F026 /* XMLApp.h */,
@@ -173,6 +178,7 @@
 				E88E745813C66C0B0051F026 /* poOpenGLView.mm in Sources */,
 				E88E745C13C66C0B0051F026 /* XMLApp.cpp in Sources */,
 				1019CD9913EB5C1C00B0184A /* perchFrame.cpp in Sources */,
+				1031DEAE13F1BA9900F60C7B /* perchbackground.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,6 +4,7 @@
 
 #include "poObject.h"
 #include "perchFrame.h"
+#include "perchbackground.h"
 #include <list>
 using namespace std;
 
@@ -20,11 +21,13 @@ public:
     poXMLNode rootNode;
     //control button
     poRectShape* controlbun;
-    poImage* controlImg;   
+    poImage* controlImg;
+    bool controlbun_click;
+    
     //save button
     poRectShape* savebun;
     poImage* saveImg;
-    
+    bool savebun_click;
   
     //add frame button
     poRectShape* addbun;
@@ -35,18 +38,14 @@ public:
     poImage* deleteImg;
 
     perchFrame* F;
-    
-//    perchFrame* F[100];
-    bool controlbun_click;
-    bool savebun_click;
-  
-
     //create a list to store perchframe objects
     LIST::iterator iter;
     LIST framelist;
+    
+    
 
 
-    bool control;
+    void addnewframe(poXMLNode oriRootNode);
    
 
 };

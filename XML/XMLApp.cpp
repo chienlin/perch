@@ -32,10 +32,13 @@ XMLApp::XMLApp() {
     controlbun_click = false;
     savebun_click = false;
     
+    //read background
+    poXMLDocument doc_background = poXMLDocument("background.xml");
+    poXMLNode doc_rootNode = doc_background.rootNode();
+    perchbackground* B = new perchbackground(doc_rootNode.getChild(0));
+    addChild(B);
 
- 
-
-    // read XML 
+    // read frames XML 
     doc = poXMLDocument("frames.xml");
 	rootNode = doc.rootNode();
     for( int i=0; i<rootNode.numChildren(); i++)
@@ -47,13 +50,11 @@ XMLApp::XMLApp() {
         framelist.insert(framelist.end(), F);
         addChild( F );
     }   
-
    
-
 
    
     //Add a control panel
-    controlImg = getImage("control_off.png");
+    controlImg = getImage("control/control_off.png");
     controlbun = new poRectShape(controlImg->texture());
     controlbun->position = poPoint(getWindowWidth()-(controlbun->bounds.width()*3/2),controlbun->bounds.height()/2);
     controlbun->alignment(PO_ALIGN_CENTER_CENTER);
@@ -62,7 +63,7 @@ XMLApp::XMLApp() {
     
     
     // Add a save button to save 
-    saveImg =getImage("save_off.png");
+    saveImg =getImage("control/save_off.png");
     savebun = new poRectShape(saveImg->texture());
     savebun->position = poPoint(getWindowWidth()-savebun->bounds.width()/2,savebun->bounds.height()/2);
     savebun->alignment(PO_ALIGN_CENTER_CENTER);
@@ -71,7 +72,7 @@ XMLApp::XMLApp() {
     addChild(savebun);
     
     //Add an add frame button
-    addImg = getImage("add.png");
+    addImg = getImage("control/add.png");
     addbun = new poRectShape(addImg->texture());
     addbun->position = poPoint(getWindowWidth()-savebun->bounds.width()*2-addbun->bounds.width()/2,addbun->bounds.height()/2);
     addbun->alignment(PO_ALIGN_CENTER_CENTER);
@@ -80,7 +81,7 @@ XMLApp::XMLApp() {
     addChild(addbun);
     
     //Add an delete frame button
-    deleteImg = getImage("delete.png");
+    deleteImg = getImage("control/delete.png");
     deletebun = new poRectShape(deleteImg->texture());
     deletebun->position = poPoint(getWindowWidth()-savebun->bounds.width()*2-deletebun->bounds.width()*3/2,deletebun->bounds.height()/2);
     deletebun->alignment(PO_ALIGN_CENTER_CENTER);
@@ -97,11 +98,12 @@ void XMLApp::update()
    
     savebun->placeTexture(saveImg->texture());
     controlbun->placeTexture(controlImg->texture());
-//    alignbun->visible = false;
+    // only in control mode, you can add and delete frames
+    addbun->visible = controlbun_click;
+    deletebun->visible = controlbun_click;
 
 
 }
-
 
 
 
@@ -111,21 +113,17 @@ void XMLApp::eventHandler( poEvent* E )
     {
        
        
-        for (iter=framelist.begin();iter!=framelist.end();++iter) 
-        {
-            (*iter)->controlswitch =!(*iter)->controlswitch ; 
-            //=! iter->controlswitch;
-            //*iter->controlswitch =!*iter->controlswitch;
+        for (iter=framelist.begin();iter!=framelist.end();++iter) (*iter)->controlswitch =!(*iter)->controlswitch ; 
+
       
-        } 
         //control button
         
         controlbun_click =! controlbun_click;
         if(controlbun_click)
         {
-            controlImg = getImage("control_on.png");
+            controlImg = getImage("control/control_on.png");
         }else{
-            controlImg = getImage("control_off.png");
+            controlImg = getImage("control/control_off.png");
         }
         
        
@@ -134,32 +132,61 @@ void XMLApp::eventHandler( poEvent* E )
     if( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "save the file")
     {
           
-            printf("Save to frames.xml\n");
-            doc.write("frames.xml");
-             //save button
-            //once you click then the save button turn to red
-            saveImg = getImage("save_on.png");
+        printf("Save to frames.xml\n");
+        doc.write("frames.xml");
+         //save button
+        //once you click then the save button turn to red
+        saveImg = getImage("control/save_on.png");
       
         
     }
     if(E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "add a new frame")
     {
-        printf("add a new frame\n");
-//        poXMLNode newframe = rootNode.addChild("frame");
-//        newframe.addChild("frameID").setInnerInt(4);
-//        newframe.addChild("scale").setInnerInt(4);
-//        newframe.addChild("posx").setInnerInt(4);
-//        newframe.addChild("posy").setInnerInt(4);
-//        
-//        doc.write("frames2.xml");
-//        printf("%d",rootNode.numChildren());
+        addnewframe(rootNode);
+        
+    }
+    
+    if(E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "delete a frame")
+    {
+        if(perchFrame::activeFrame != NULL)
+        {
+            perchFrame::activeFrame->parent()->removeChild( perchFrame::activeFrame );// remove from window
+            rootNode.removeChild(perchFrame::activeFrame->frameNode.name());//remove from XML file
+//            framelist.remove(perchFrame::activeFrame);// remove from framelist
+            perchFrame::activeFrame = NULL;// set the activeFrame to Null
+//            printf("listsize:%d",int(framelist.size()));
+          
+        }
+       
     }
     
     if(E->type == PO_MOUSE_OVER_EVENT&& E->message =="mouse over")
     {
         //one you finish the click then the save button turn to pink
-        saveImg = getImage("save_off.png");
+        saveImg = getImage("control/save_off.png");
     }
     
   }
+
+void XMLApp::addnewframe(poXMLNode oriRootNode)
+{
+    
+    poXMLNode newframe = oriRootNode.addChild("frame");
+    //default setting of new frame
+    newframe.addChild("frameID").setInnerInt(int(framelist.size())+1);
+    newframe.addChild("scale").setInnerFloat(1.0);
+    newframe.addChild("posx").setInnerInt(150);
+    newframe.addChild("posy").setInnerInt(150);
+    newframe.addChild("image").setInnerString(oriRootNode.getChild(0).getChild("image").innerString());
+    //add a new frame to the screen
+    F = new perchFrame(newframe);
+    framelist.insert(framelist.end(), F);
+    //make sure the new frame in the same control mode as other
+    F->controlswitch = controlbun_click;
+    addChild( F );
+
+    printf("add a new frame\n");
+    
+    
+}
 

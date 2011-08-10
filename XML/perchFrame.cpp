@@ -13,6 +13,9 @@
 #include <boost/format.hpp>
 #define grid 15
 
+
+perchFrame* perchFrame::activeFrame = NULL;
+
 perchFrame::perchFrame( poXMLNode node )
 {
     
@@ -35,6 +38,7 @@ perchFrame::perchFrame( poXMLNode node )
     R->alignment( PO_ALIGN_CENTER_CENTER );
     R->scale.set( S,S,1 );
     R->calculateBounds();
+    R->strokeColor = poColor::red;
     R->addEvent( PO_MOUSE_DRAG_EVENT, this, "drag the frame" );
     R->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT,this, "click the frame");
     addChild( R );
@@ -56,7 +60,7 @@ perchFrame::perchFrame( poXMLNode node )
     SR1->addEvent(PO_MOUSE_DRAG_EVENT, this, "drag the green rect");
     SR1->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT,this, "click the green rect");
     R->addChild(SR1);
-
+       
     
 }
 void perchFrame::draw(){
@@ -78,6 +82,22 @@ void perchFrame::update(){
     //open green scale-control rectangle
     SR1->visible = controlswitch;
     
+    // make the static activeFrame for delete function
+    if ( this == activeFrame )
+    {
+        frameNode.setName("Selected");
+        R->generateStroke(6);
+     
+    }
+    else
+    {    
+        frameNode.setName("frame");
+        R->generateStroke(0);
+    }
+    // assign active frame when it is not in select mode
+    if (!controlswitch) activeFrame = NULL;
+
+    
 }
 
 void perchFrame::eventHandler( poEvent* E )
@@ -87,9 +107,11 @@ void perchFrame::eventHandler( poEvent* E )
      {
     
                  
-         
+        //frames 
         if ( E->type == PO_MOUSE_DRAG_EVENT && E->message == "drag the frame")
         {
+            activeFrame = this;
+            
             //move by invisible grid line
             position.x = int(E->position.x/grid)*grid;
             position.y = int(E->position.y/grid)*grid;
@@ -98,8 +120,15 @@ void perchFrame::eventHandler( poEvent* E )
             frameNode.getChild("posy").setInnerInt(position.y);
                   
          }
+         if ( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "click the frame")
+         {
+             activeFrame = this;
+         }
+         
+         //green scale control
          if ( E->type == PO_MOUSE_DRAG_EVENT && E->message == "drag the green rect")
          {
+        
              
              poPoint tempPosition = R->objectToLocal(SR1,E->local_position); 
              printf("tempPosition(%f,%f)\n",tempPosition.x,tempPosition.y);

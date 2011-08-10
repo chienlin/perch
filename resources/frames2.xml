@@ -2,38 +2,50 @@
 <frames_list>
 	<frame>
 		<frameID>1</frameID>
-		<scale>1.28524792</scale>
-		<posx>930</posx>
-		<posy>630</posy>
+		<scale>1.59757471</scale>
+		<posx>345</posx>
+		<posy>180</posy>
 		<image>3Dbox.png</image>
 		<fontID>12</fontID>
 	</frame>
 	<frame>
 		<frameID>2</frameID>
-		<scale>0.940749586</scale>
-		<posx>337</posx>
-		<posy>177</posy>
-		<image>3Dbox.png</image>
-		<fontID />
-	</frame>
-	<frame>
-		<frameID>3</frameID>
-		<scale>1.72894037</scale>
-		<posx>300</posx>
+		<scale>1.28876626</scale>
+		<posx>810</posx>
 		<posy>495</posy>
 		<image>3Dbox.png</image>
 		<fontID />
 	</frame>
 	<frame>
-		<frameID />
-		<scale />
-		<posx />
-		<posy />
+		<frameID>3</frameID>
+		<scale>1.46679235</scale>
+		<posx>525</posx>
+		<posy>555</posy>
+		<image>3Dbox.png</image>
+		<fontID />
 	</frame>
 	<frame>
-		<frameID />
-		<scale />
-		<posx />
-		<posy />
+		<frameID>4</frameID>
+		<scale>4</scale>
+		<posx>4</posx>
+		<posy>4</posy>
+	</frame>
+	<frame>
+		<frameID>4</frameID>
+		<scale>4</scale>
+		<posx>4</posx>
+		<posy>4</posy>
+	</frame>
+	<frame>
+		<frameID>4</frameID>
+		<scale>4</scale>
+		<posx>4</posx>
+		<posy>4</posy>
+	</frame>
+	<frame>
+		<frameID>4</frameID>
+		<scale>4</scale>
+		<posx>4</posx>
+		<posy>4</posy>
 	</frame>
 </frames_list>

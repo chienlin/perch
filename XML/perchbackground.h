@@ -8,7 +8,20 @@
 
 #ifndef XML_background_h
 #define XML_background_h
+#include "poShapeBasics2D.h"
+#include "poXML.h"
+
+class perchbackground : public poObject
+{
+public:
+    perchbackground(poXMLNode node);
+    void draw();
+    void update();
+    void eventhandler(poEvent* E);
 
 
+
+
+};
 
 #endif

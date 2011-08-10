@@ -2,10 +2,10 @@
 
 <background_list>
 	<background>
-        <picture>BG1.jpg</picture>
+        <backgroundpicture>BG1.png</backgroundpicture>
         <texture></texture>
         <text></text>
-        <logo></logo>
+        <logo>logo.png</logo>
         <position></position> <!-- this can be centered, or stretch, or tile -->
         <animation_mode></animation_mode>
 	</background>

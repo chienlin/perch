@@ -39,6 +39,8 @@ public:
     // make all frames aligned to y
     bool alignvertical;
     int num;
+    
+    static perchFrame* activeFrame;
 };
 
 
