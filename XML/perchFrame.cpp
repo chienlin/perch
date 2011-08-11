@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include "perchFrame.h"
-#include "perchProduct.h"
 #include "poApplication.h"
 #include "poResourceStore.h"
 #include <boost/format.hpp>
@@ -17,18 +16,20 @@
 
 perchFrame* perchFrame::activeFrame = NULL;
 
-perchFrame::perchFrame( poXMLNode node )
+perchFrame::perchFrame( poXMLNode _framesNode, poXMLNode _productNode )
 {
     
     controlswitch = false;
-    frameNode = node;
+    framesNode = _framesNode;
+    productNode = _productNode;
+
     
     // object position
-    position = poPoint( frameNode.getChild("posx").innerInt(), frameNode.getChild("posy").innerInt() );
+    position = poPoint( framesNode.getChild("posx").innerInt(), framesNode.getChild("posy").innerInt() );
 
     // make image frame
-    float S = frameNode.getChild("scale").innerFloat();
-    std::string imageName = frameNode.getChild("image").innerString();
+    float S = framesNode.getChild("scale").innerFloat();
+    std::string imageName = framesNode.getChild("image").innerString();
     
     R = new poRectShape( imageName );
     R->alignment( PO_ALIGN_CENTER_CENTER );
@@ -57,13 +58,15 @@ perchFrame::perchFrame( poXMLNode node )
     SR1->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT,this, "click the green rect");
     R->addChild(SR1);
     
-    //read product info from product.xml
-//    poXMLDocument doc_product = poXMLDocument("product.xml");
-//    productInfo = new perchProduct(doc_product.rootNode(),frameNode.getChild("frameID").innerInt());//according to current frameID find the product info in product.xml
-//    productInfo->position = poPoint(R->bounds.height()*R->scale.x/2,R->bounds.width()*R->scale.x/2);
-//    productInfo->alignment(PO_ALIGN_CENTER_CENTER);
-//    R->addChild(productInfo);
-//    productInfo->visible = false;        
+    //show the info of this product
+    productInfo = new perchProduct(productNode);//according to current frameID find the product info in product.xml
+//    productInfo->position = poPoint(R->bounds.width()*R->scale.x/2,R->bounds.height()*R->scale.x/2);
+    productInfo->position = poPoint(100,100);
+    productInfo->alignment(PO_ALIGN_TOP_LEFT);
+    productInfo->visible = false; 
+    productInfo->displaynum = 0;
+    R->addChild(productInfo);
+   
        
     
 }
@@ -77,33 +80,38 @@ void perchFrame::update(){
     
     //open frame bounds when controlswitch on
     R->drawBounds = controlswitch;
+    
     //open textbox when contolswitch on
     tb->position.set(R->bounds.width()*R->scale.x/2,0,1);
     tb->visible = controlswitch;
     char buffer [50];
     sprintf(buffer,"position:(%f,%f) scale: %f",position.x,position.y,R->scale.x);
     tb->text(buffer)->layout();
+    
     //open green scale-control rectangle
     SR1->visible = controlswitch;
     
     // make the static activeFrame for delete function
     if ( this == activeFrame )
     {
-        frameNode.setName("Selected");
+        framesNode.setName("Selected");
+        productNode.setName("Selected");
         R->generateStroke(6);
     }
     else
     {    
-        frameNode.setName("frame");
+        framesNode.setName("frame");
+        productNode.setName("product");
         R->generateStroke(0);
     }
+    
     // assign active frame when it is not in select mode
     if (!controlswitch) 
     {
         activeFrame = NULL;
     }else
     {
-//        productInfo->visible = false;
+        productInfo->visible = false;
     }
     
     
@@ -127,8 +135,8 @@ void perchFrame::eventHandler( poEvent* E )
             position.x = int(E->position.x/grid)*grid;
             position.y = int(E->position.y/grid)*grid;
             //save the new position back to XML
-            frameNode.getChild("posx").setInnerInt(position.x);
-            frameNode.getChild("posy").setInnerInt(position.y);
+            framesNode.getChild("posx").setInnerInt(position.x);
+            framesNode.getChild("posy").setInnerInt(position.y);
                   
          }
          if ( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "click the frame")
@@ -163,7 +171,7 @@ void perchFrame::eventHandler( poEvent* E )
                  R->scale.y = R->scale.x;
                  
              }
-             frameNode.getChild("scale").setInnerFloat(R->scale.x);
+             framesNode.getChild("scale").setInnerFloat(R->scale.x);
          }
   
      
@@ -173,9 +181,9 @@ void perchFrame::eventHandler( poEvent* E )
      
          if ( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "click the frame")
          {
-           
-         
-//             productInfo->visible = true;
+             productInfo->visible = true;
+             productInfo->displaynum ++;
+             printf("%d\n",productInfo->displaynum);
          }
      
      

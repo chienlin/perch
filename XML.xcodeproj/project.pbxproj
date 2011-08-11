@@ -101,8 +101,8 @@
 		E88E745913C66C0B0051F026 /* application */ = {
 			isa = PBXGroup;
 			children = (
-				1031DECB13F30FDC00F60C7B /* perchProduct.cpp */,
 				1031DECC13F30FDC00F60C7B /* perchProduct.h */,
+				1031DECB13F30FDC00F60C7B /* perchProduct.cpp */,
 				1031DEAB13F1BA7300F60C7B /* perchbackground.h */,
 				1031DEAD13F1BA9900F60C7B /* perchbackground.cpp */,
 				1019CD9813EB5C1C00B0184A /* perchFrame.h */,

@@ -1,31 +1,45 @@
 <?xml version="1.0"?>
 <frames_list>
 	<frame>
-		<frameID>4</frameID>
-		<scale>1</scale>
+		<frameID>2</frameID>
+		<scale>0.689017355</scale>
+		<posx>495</posx>
+		<posy>420</posy>
+		<image>3Dbox.png</image>
+	</frame>
+	<frame>
+		<frameID>3</frameID>
+		<scale>1.5594511</scale>
 		<posx>840</posx>
-		<posy>480</posy>
+		<posy>225</posy>
 		<image>3Dbox.png</image>
 	</frame>
 	<frame>
 		<frameID>5</frameID>
-		<scale>0.325294197</scale>
-		<posx>360</posx>
-		<posy>480</posy>
+		<scale>1</scale>
+		<posx>855</posx>
+		<posy>525</posy>
 		<image>3Dbox.png</image>
 	</frame>
 	<Selected>
-		<frameID>9</frameID>
-		<scale>1</scale>
-		<posx>345</posx>
-		<posy>330</posy>
+		<frameID>6</frameID>
+		<scale>0.583029568</scale>
+		<posx>210</posx>
+		<posy>435</posy>
 		<image>3Dbox.png</image>
 	</Selected>
 	<frame>
-		<frameID>10</frameID>
-		<scale>1.27472496</scale>
-		<posx>750</posx>
-		<posy>195</posy>
+		<frameID>8</frameID>
+		<scale>1</scale>
+		<posx>450</posx>
+		<posy>600</posy>
+		<image>3Dbox.png</image>
+	</frame>
+	<frame>
+		<frameID>9</frameID>
+		<scale>1</scale>
+		<posx>285</posx>
+		<posy>210</posy>
 		<image>3Dbox.png</image>
 	</frame>
 </frames_list>

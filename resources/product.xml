@@ -1,148 +1,51 @@
-
-
+<?xml version="1.0"?>
 <product_list>
-
-	<product frameID="5">
-		<name>fancy shoe</name>
-        <frameID>1</frameID>
+	<product>
+		<productID>2</productID>
+		<name>Fancy Shoe</name>
 		<price>200</price>
-        <sale_price>150</sale_price>
-		<size_list>
-            <size>4</size>
-            <size>6</size>            
-            <size>10</size>
-            <size>12</size>                            
-            <size>14</size>
-        </size_list>
-        <color_list>
-            <color>red</color>
-            <color>brown</color>
-            <color>white</color>
-        </color_list>
-        <description_short>This is a short description of the fancy shoe.</description_short>
-        <description_long>This is a long description of the fancy shoe.</description_long>
-        <video_list>
-            <video>fancyvid1.mov</video>
-            <video>fancyvid2.mov</video>
-        </video_list>
-		<photo_list>
-			<photo>fancy1.jpg</photo>
-			<photo>fancy2.jpg</photo>
-			<photo>fancy3.jpg</photo>
-		</photo_list>
-        <specs_list>
-            <spec>leather</spec>
-            <spec>furry</spec>            
-        </specs_list>
-        <reviews_list>
-            <review> this is a fancy review </review>
-        </reviews_list>
-		<quote_list>
-			<quote>I like these fancy shoes!</quote>
-			<quote>I like fancy thing!</quote>
-			<quote>These are great and fancy!</quote>
-		</quote_list>
-        <suggest_list>
-            <suggest>would you like to try the fancy brown one? </suggest>
-        </suggest_list>  
+		<size>4</size>
+		<color>red</color>
+		<description_short>This is a short description of the fancy shoe.</description_short>
 	</product>
- <!--------------------------------------------------------------------->   
-    <product frameID="4">
-		<name>serious shoe</name>
-        <frameID>1</frameID>
-		<price>250</price>
-        <sale_price>230</sale_price>
-		<size_list>
-            <size>4</size>
-            <size>6</size>            
-            <size>10</size>
-            <size>12</size>                            
-            <size>14</size>
-        </size_list>
-        <color_list>
-            <color>red</color>
-            <color>brown</color>
-            <color>white</color>
-        </color_list>
-        <description_short>This is a short description of the serious shoe.</description_short>
-        <description_long>This is a long description of the serious shoe.</description_long>
-        <video_list>
-            <video>seriousvid1.mov</video>
-            <video>seriousvid2.mov</video>
-        </video_list>
-		<photo_list>
-			<photo>serious1.jpg</photo>
-			<photo>serious.jpg</photo>
-			<photo>serious3.jpg</photo>
-		</photo_list>
-        <specs_list>
-            <spec>plastic</spec>
-            <spec>flat</spec>            
-        </specs_list>
-        <reviews_list>
-            <review> this is a serious review </review>
-        </reviews_list>
-		<quote_list>
-			<quote>I like these serious shoes!</quote>
-			<quote>I like serious thing!</quote>
-			<quote>These are great and serious!</quote>
-		</quote_list>
-        <suggest_list>
-            <suggest>would you like to try the serious brown one? </suggest>
-        </suggest_list>  
+	<product>
+		<productID>3</productID>
+		<name>Boring Shoe</name>
+		<price>200</price>
+		<size>4</size>
+		<color>red</color>
+		<description_short>This is a short description of the boring shoe.</description_short>
 	</product>
-<!------------------------------------------------------------------------>
-    <product frameID="6">
-		<name>funny shoe</name>
-        <frameID>1</frameID>
-		<price>250</price>
-        <sale_price>230</sale_price>
-		<size_list>
-            <size>4</size>
-            <size>6</size>            
-            <size>10</size>
-            <size>12</size>                            
-            <size>14</size>
-        </size_list>
-        <color_list>
-            <color>red</color>
-            <color>brown</color>
-            <color>white</color>
-        </color_list>
-        <description_short>This is a short description of the funny shoe.</description_short>
-        <description_long>This is a long description of the funny shoe.</description_long>
-        <video_list>
-            <video>funnyvid1.mov</video>
-            <video>funnyvid2.mov</video>
-        </video_list>
-		<photo_list>
-			<photo>funny1.jpg</photo>
-			<photo>funny.jpg</photo>
-			<photo>funny3.jpg</photo>
-		</photo_list>
-        <specs_list>
-            <spec>plastic</spec>
-            <spec>flat</spec>            
-        </specs_list>
-        <reviews_list>
-            <review> this is a funny review </review>
-        </reviews_list>
-		<quote_list>
-			<quote>I like these funny shoes!</quote>
-			<quote>I like funny thing!</quote>
-			<quote>These are great and funny!</quote>
-		</quote_list>
-        <suggest_list>
-            <suggest>would you like to try the funny brown one? </suggest>
-        </suggest_list>  
+	<product>
+		<productID>5</productID>
+		<name>Super shoe</name>
+		<price>150</price>
+		<size>6</size>
+		<color>Red</color>
+		<description_short>This is the short description of the super shoe</description_short>
 	</product>
-    <product frameID="9">
-        <price>250</price>
-        <description_short>please enter description.</description_short>
-    </product>
-    <product frameID="10">
-        <price>250</price>
-        <description_short>please enter description</description_short>
-    </product>
-
+	<Selected>
+		<productID>6</productID>
+		<name>Just shoe</name>
+		<price>150</price>
+		<size>6</size>
+		<color>Red</color>
+		<description_short>Please enter the short description6</description_short>
+	</Selected>
+	<product>
+		<productID>8</productID>
+		<name>shoe</name>
+		<price>150</price>
+		<size>6</size>
+		<color>Red</color>
+		<description_short>Please enter the short description</description_short>
+	</product>
+	<product>
+		<productID>9</productID>
+		<name>Shoe</name>
+		<price>150</price>
+		<size>6</size>
+		<color>Red</color>
+		<description_short>Please enter the short description</description_short>
+	</product>
 </product_list>

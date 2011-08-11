@@ -32,25 +32,32 @@ XMLApp::XMLApp() {
     controlbun_click = false;
     savebun_click = false;
     
-    //read background
+    //read background.XML
     poXMLDocument doc_background = poXMLDocument("background.xml");
-    poXMLNode doc_rootNode = doc_background.rootNode();
-    perchbackground* B = new perchbackground(doc_rootNode.getChild(0));
+    poXMLNode rootNode_background = doc_background.rootNode();
+    perchbackground* B = new perchbackground(rootNode_background.getChild(0));
     addChild(B);
 
-    // read frames XML 
-    doc = poXMLDocument("frames.xml");
-	rootNode = doc.rootNode();
-    for( int i=0; i<rootNode.numChildren(); i++)
+    // read frames.XML 
+    doc_frames = poXMLDocument("frames.xml");
+	rootNode_frames = doc_frames.rootNode();
+    
+    // read product.XML
+    doc_product = poXMLDocument("product.xml");
+    rootNode_product = doc_product.rootNode();
+    
+    //Print the frames we have
+    for( int i=0; i<rootNode_frames.numChildren(); i++)
     {
-        poXMLNode frameNode = rootNode.getChild(i); 
-        //F[i] = new perchFrame( frameNode);
-        //addChild(F[i]);
-        F = new perchFrame( frameNode );
+        poXMLNode frameNode = rootNode_frames.getChild(i);
+        poXMLNode productNode = rootNode_product.getChild(i);
+
+        F = new perchFrame( frameNode,productNode );
         framelist.insert(framelist.end(), F);
         addChild( F );
-    }   
+    }
     
+ 
 
    
     //Add a control panel
@@ -133,8 +140,11 @@ void XMLApp::eventHandler( poEvent* E )
     {
           
         printf("Save to frames.xml\n");
-        doc.write("frames.xml");
-         //save button
+        doc_frames.write("frames.xml");
+        printf("Save to product.xml\n");
+        doc_product.write("product.xml");
+        
+        //save button
         //once you click then the save button turn to red
         saveImg = getImage("control/save_on.png");
       
@@ -142,7 +152,7 @@ void XMLApp::eventHandler( poEvent* E )
     }
     if(E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "add a new frame")
     {
-        addnewframe(rootNode);
+        addnewframe(rootNode_frames,rootNode_product);
         
     }
     
@@ -151,10 +161,12 @@ void XMLApp::eventHandler( poEvent* E )
         if(perchFrame::activeFrame != NULL)
         {
             perchFrame::activeFrame->parent()->removeChild( perchFrame::activeFrame );// remove from window
-            rootNode.removeChild(perchFrame::activeFrame->frameNode.name());//remove from XML file
-//            framelist.remove(perchFrame::activeFrame);// remove from framelist
+            rootNode_frames.removeChild(perchFrame::activeFrame->framesNode.name());//remove from frames.xml file
+            rootNode_product.removeChild(perchFrame::activeFrame->productNode.name());//remove from product.xml file
             perchFrame::activeFrame = NULL;// set the activeFrame to Null
-//            printf("listsize:%d",int(framelist.size()));
+            
+            framelist.remove(perchFrame::activeFrame);// remove from framelist
+            printf("listsize:%d",int(framelist.size()));
           
         }
        
@@ -168,18 +180,35 @@ void XMLApp::eventHandler( poEvent* E )
     
   }
 
-void XMLApp::addnewframe(poXMLNode oriRootNode)
+void XMLApp::addnewframe(poXMLNode oriRootNode_frames,poXMLNode oriRootNode_product)
 {
+    int latestFrameID = 0;
+    latestFrameID = rootNode_frames.getChild(rootNode_frames.numChildren()-1).getChild("frameID").innerInt();
+
+    printf("latestFrameID = %d",latestFrameID);
     
-    poXMLNode newframe = oriRootNode.addChild("frame");
+    poXMLNode newframe = oriRootNode_frames.addChild("frame");
     //default setting of new frame
-    newframe.addChild("frameID").setInnerInt(int(framelist.size())+1);
+    newframe.addChild("frameID").setInnerInt(latestFrameID+1);
     newframe.addChild("scale").setInnerFloat(1.0);
     newframe.addChild("posx").setInnerInt(150);
     newframe.addChild("posy").setInnerInt(150);
-    newframe.addChild("image").setInnerString(oriRootNode.getChild(0).getChild("image").innerString());
+    newframe.addChild("image").setInnerString(oriRootNode_frames.getChild(0).getChild("image").innerString());
+    
+    
+    
+    poXMLNode newproduct = oriRootNode_product.addChild("product");
+    //default setting of new frame
+    newproduct.addChild("productID").setInnerInt(latestFrameID+1);
+    newproduct.addChild("name").setInnerString("Shoe");
+    newproduct.addChild("price").setInnerInt(150);
+    newproduct.addChild("size").setInnerInt(6);
+    newproduct.addChild("color").setInnerString("Red");
+    newproduct.addChild("description_short").setInnerString("Please enter the short description");
+    
+    
     //add a new frame to the screen
-    F = new perchFrame(newframe);
+    F = new perchFrame(newframe,newproduct);
     framelist.insert(framelist.end(), F);
     //make sure the new frame in the same control mode as other
     F->controlswitch = controlbun_click;

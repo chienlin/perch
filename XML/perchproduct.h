@@ -13,16 +13,17 @@
 #include"poXML.h"
 #include "poTextBox.h"
 
-
+#include <iostream>
 class perchProduct: public poObject
 {
 public:
-    perchProduct(poXMLNode productNode, int perchFrameID);
+    perchProduct(poXMLNode productNode);
     void eventhandler(poEvent *E);
     
     poXMLNode rootNode;
-    //use perchFrameID to find the corresponding product info in product.xml (When perchFrameID(n) = <product frameID n>)
-    int findPerchProduct(int perchFrameID);
+    poTextBox* tb;
+    int displaynum;
+    void update();
 
 
 };

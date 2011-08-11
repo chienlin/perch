@@ -11,25 +11,53 @@
 #include "perchProduct.h"
 
 
-perchProduct::perchProduct(poXMLNode perchProductNode, int perchFrameID)
+perchProduct::perchProduct(poXMLNode productNode)
 {
-    rootNode = perchProductNode;
-    int a =findPerchProduct(perchFrameID);//a = nth perchProduct
+    rootNode = productNode;//nth prodouct
+    displaynum = 0;
 
     
-    poTextBox* tb = new poTextBox(150,150);
+    tb = new poTextBox(150,150);
     tb->textColor = poColor::white; 
-    tb->text(rootNode.getChild(a).getChild("description_short").innerString())->layout();
- //   tb->position = tb->parent()->position/2;
-
+    tb->text(rootNode.getChild("name").innerString())->layout();
+//    tb->drawBounds = 1;
     addChild(tb);
 
     
 }
-int perchProduct::findPerchProduct(int ID)
+void perchProduct::update()
 {
-    for (int i = 0; i<rootNode.numChildren(); i++) {
-       if(rootNode.getChild(i).intAttribute("frameID") == ID) return i;
+    char buffer [50];
+    if (displaynum > 4) displaynum = 0;
+    
+    switch (displaynum) {
+        case 1:
+            tb->text(rootNode.getChild("name").innerString())->layout();
+            break;
+        case 2:
+            sprintf(buffer,"%d",rootNode.getChild("price").innerInt());
+            tb->text(buffer)->layout();
+            break;
+        case 3:
+            sprintf(buffer,"%d",rootNode.getChild("size").innerInt());
+            tb->text(buffer)->layout();            
+            break;
+        case 4:
+            tb->text(rootNode.getChild("color").innerString())->layout();
+            break;
+        case 5:
+            tb->text(rootNode.getChild("description_short").innerString())->layout();
+            break;
+        default:
+            tb->text(rootNode.getChild("name").innerString())->layout();
+            break;
     }
+
+
+}
+void perchProduct::eventhandler(poEvent *E)
+{
+
+
 
 }

@@ -17,8 +17,15 @@ public:
     void update();
     void eventHandler( poEvent* E );
     
-    poXMLDocument doc;
-    poXMLNode rootNode;
+    poXMLDocument doc_frames;//frame.xml
+    poXMLNode rootNode_frames;//rootNode for frame.xml
+    poXMLDocument doc_product;//product.xml
+    poXMLNode rootNode_product;//rootNode for product.xml
+
+    
+    
+    
+    
     //control button
     poRectShape* controlbun;
     poImage* controlImg;
@@ -45,7 +52,8 @@ public:
     
 
 
-    void addnewframe(poXMLNode oriRootNode);
+    void addnewframe(poXMLNode oriRootNode_frames,poXMLNode oriRootNode_product);
+
    
 
 };

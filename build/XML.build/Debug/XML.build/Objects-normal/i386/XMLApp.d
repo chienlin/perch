@@ -44,6 +44,7 @@ dependencies \
   /Potion/poFramework/poFramework4/source/poBitmapFontAtlas.h \
   /Potion/poFramework/poFramework4/source/Loaders.h \
   /Potion/poFramework/poFramework4/source/poTextureAtlas.h \
+  /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchProduct.h \
   /Potion/poFramework/poFramework4/samples/XML_perchtest/XML/perchbackground.h \
   /Potion/poFramework/poFramework4/source/poApplication.h \
   /Potion/poFramework/poFramework4/source/poWindow.h \
