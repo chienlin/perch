@@ -30,6 +30,7 @@ public:
   
     //main rect
     poRectShape* R;
+    poImage* frameImg;
     //textbox for rect info
     poTextBox* tb;
     //small green rect to control scale

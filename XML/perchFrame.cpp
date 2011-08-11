@@ -31,10 +31,10 @@ perchFrame::perchFrame( poXMLNode _framesNode, poXMLNode _productNode )
     float S = framesNode.getChild("scale").innerFloat();
     std::string imageName = framesNode.getChild("image").innerString();
     
+    frameImg = getImage(imageName);
     R = new poRectShape( imageName );
     R->alignment( PO_ALIGN_CENTER_CENTER );
     R->scale.set( S,S,1 );
-    R->calculateBounds();
     R->strokeColor = poColor::red;
     R->addEvent( PO_MOUSE_DRAG_EVENT, this, "drag the frame" );
     R->addEvent(PO_MOUSE_DOWN_INSIDE_EVENT,this, "click the frame");
@@ -61,7 +61,7 @@ perchFrame::perchFrame( poXMLNode _framesNode, poXMLNode _productNode )
     //show the info of this product
     productInfo = new perchProduct(productNode);//according to current frameID find the product info in product.xml
 //    productInfo->position = poPoint(R->bounds.width()*R->scale.x/2,R->bounds.height()*R->scale.x/2);
-    productInfo->position = poPoint(100,100);
+    productInfo->position = poPoint(80,80);
     productInfo->alignment(PO_ALIGN_TOP_LEFT);
     productInfo->visible = false; 
     productInfo->displaynum = 0;
@@ -80,7 +80,7 @@ void perchFrame::update(){
     
     //open frame bounds when controlswitch on
     R->drawBounds = controlswitch;
-    
+
     //open textbox when contolswitch on
     tb->position.set(R->bounds.width()*R->scale.x/2,0,1);
     tb->visible = controlswitch;
@@ -111,10 +111,11 @@ void perchFrame::update(){
         activeFrame = NULL;
     }else
     {
-        productInfo->visible = false;
+//        productInfo->visible = false;
     }
-    
-    
+    // for changing frame image
+    R->calculateBounds();
+    R->placeTexture(frameImg->texture());
     
     
 }
@@ -175,19 +176,23 @@ void perchFrame::eventHandler( poEvent* E )
          }
   
      
-     }else// control switch = false
-     {
+     }
+//     else// control switch = false
+//     {
      
      
          if ( E->type == PO_MOUSE_DOWN_INSIDE_EVENT && E->message == "click the frame")
          {
              productInfo->visible = true;
              productInfo->displaynum ++;
+             if (productInfo->displaynum == 1) frameImg = getImage("box_open.png");
+             if (productInfo->displaynum == 6) frameImg = getImage("box_close.png");
+
              printf("%d\n",productInfo->displaynum);
          }
      
      
-     }
+     
     
    
 }

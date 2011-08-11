@@ -3,43 +3,29 @@
 	<frame>
 		<frameID>2</frameID>
 		<scale>0.689017355</scale>
-		<posx>495</posx>
-		<posy>420</posy>
-		<image>3Dbox.png</image>
-	</frame>
-	<frame>
-		<frameID>3</frameID>
-		<scale>1.5594511</scale>
-		<posx>840</posx>
-		<posy>225</posy>
-		<image>3Dbox.png</image>
+		<posx>390</posx>
+		<posy>405</posy>
+		<image>box_close.png</image>
 	</frame>
 	<frame>
 		<frameID>5</frameID>
-		<scale>1</scale>
-		<posx>855</posx>
-		<posy>525</posy>
-		<image>3Dbox.png</image>
+		<scale>1.04296815</scale>
+		<posx>1035</posx>
+		<posy>345</posy>
+		<image>box_close.png</image>
 	</frame>
-	<Selected>
+	<frame>
 		<frameID>6</frameID>
 		<scale>0.583029568</scale>
-		<posx>210</posx>
-		<posy>435</posy>
-		<image>3Dbox.png</image>
-	</Selected>
-	<frame>
-		<frameID>8</frameID>
-		<scale>1</scale>
-		<posx>450</posx>
-		<posy>600</posy>
-		<image>3Dbox.png</image>
+		<posx>135</posx>
+		<posy>420</posy>
+		<image>box_close.png</image>
 	</frame>
 	<frame>
-		<frameID>9</frameID>
-		<scale>1</scale>
-		<posx>285</posx>
-		<posy>210</posy>
-		<image>3Dbox.png</image>
+		<frameID>7</frameID>
+		<scale>0.881524742</scale>
+		<posx>675</posx>
+		<posy>375</posy>
+		<image>box_close.png</image>
 	</frame>
 </frames_list>

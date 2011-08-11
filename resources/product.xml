@@ -9,14 +9,6 @@
 		<description_short>This is a short description of the fancy shoe.</description_short>
 	</product>
 	<product>
-		<productID>3</productID>
-		<name>Boring Shoe</name>
-		<price>200</price>
-		<size>4</size>
-		<color>red</color>
-		<description_short>This is a short description of the boring shoe.</description_short>
-	</product>
-	<product>
 		<productID>5</productID>
 		<name>Super shoe</name>
 		<price>150</price>
@@ -24,24 +16,16 @@
 		<color>Red</color>
 		<description_short>This is the short description of the super shoe</description_short>
 	</product>
-	<Selected>
+	<product>
 		<productID>6</productID>
 		<name>Just shoe</name>
 		<price>150</price>
 		<size>6</size>
 		<color>Red</color>
 		<description_short>Please enter the short description6</description_short>
-	</Selected>
-	<product>
-		<productID>8</productID>
-		<name>shoe</name>
-		<price>150</price>
-		<size>6</size>
-		<color>Red</color>
-		<description_short>Please enter the short description</description_short>
 	</product>
 	<product>
-		<productID>9</productID>
+		<productID>7</productID>
 		<name>Shoe</name>
 		<price>150</price>
 		<size>6</size>
